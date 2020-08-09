@@ -1,11 +1,12 @@
 import React from 'react';
+import Home from './components/index'
 
 import './App.css';
 
 function App() {
   return (
     <>
-      <h1>hello</h1>
+      <Home />
     </>
   );
 }
