@@ -22,9 +22,14 @@ import {
 const Navbar = () => {
   return (
     <Box component="nav">
-      <AppBar>
+      <AppBar position="static" style={{background: "#222"}}>
         <Toolbar>
-          <ArrowBack />
+          <IconButton>
+            <ArrowBack style={{color: "tomato"}} />
+          </IconButton>
+          <Typography variant="h5" style={{color: "tan"}}>
+            Portfolio
+          </Typography>
         </Toolbar>
       </AppBar>
     </Box>
