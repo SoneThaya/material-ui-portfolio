@@ -46,7 +46,7 @@ const Header = () => {
         <Typed strings={["Russel Crowe"]} typeSpeed={40} />
       </Typography>
       <br />
-      <Typography className={classes.subTitle} variant="h5">
+      <Typography className={classes.subtitle} variant="h5">
         <Typed
           strings={["Web Design", "Web Development", "MERN Stack"]}
           typeSpeed={40}
