@@ -12,7 +12,7 @@ import {
   Typography
 } from '@material-ui/core'
 import Navbar from './Navbar'
-import project1 from "../images/html-css-javascript-lg.jpg"
+import project1 from "../images/alan.jpg"
 import project2 from "../images/javascript-fullstack.jpg"
 import project3 from "../images/react-redux.jpg"
 import project4 from "../images/mern-stack.jpg"
@@ -43,25 +43,30 @@ const Portfolio = () => {
               <CardMedia
                 component="img"
                 alt="Project 1"
-                height="140"
+                height="180"
                 image={project1}
               />
                 <CardContent>
                   <Typography gutterBottom variant="h5">
-                    Project 1
+                    Voice Controlled News App
                   </Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, culpa hic. Illo quos excepturi aliquam nulla natus maxime a similique non, placeat quisquam incidunt, animi fugiat unde eaque doloremque! Repudiandae.
+                    A conversational voice controlled React news application using Alan AI. A speech recognition software that allows you to add voice capabilities to your applications. This app uses news News API for the news and Material UI for styling.
                   </Typography>
                 </CardContent>
             </CardActionArea>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    Share
-                  </Button>
-                  <Button size="small" color="primary">
-                    Share
-                  </Button>
+            <CardActions>
+              <a href="https://get-news.vercel.app/">
+                <Button size="small" color="primary">
+                  Visit Site
+                </Button>
+              </a>
+              <a href="https://github.com/SoneThaya/voice-controlled-app">
+                <Button size="small" color="primary">
+                  Github
+                </Button>
+              </a>
+                  
                 </CardActions>
           </Card>
         </Grid>

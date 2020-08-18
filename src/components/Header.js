@@ -6,7 +6,7 @@ import {
   Grid,
   Box
 } from '@material-ui/core'
-import avatar from "../avatar.png"
+import avatar from "../pngwave.png"
 import Typed from "react-typed"
 
 const useStyles = makeStyles(theme => ({
@@ -43,12 +43,12 @@ const Header = () => {
       </Grid>
       
       <Typography className={classes.title} variant="h4">
-        <Typed strings={["Russel Crowe"]} typeSpeed={40} />
+        <Typed strings={["Sone Thaya"]} typeSpeed={40} />
       </Typography>
       <br />
       <Typography className={classes.subtitle} variant="h5">
         <Typed
-          strings={["Web Design", "Web Development", "MERN Stack"]}
+          strings={["Web Design", "Web Development", "Full Stack"]}
           typeSpeed={40}
           backSpeed={60}
           loop
