@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { makeStyles, withStyles } from '@material-ui/core/styles'
 import { TextField, Typography, Button, Grid, Box } from '@material-ui/core'
 import SendIcon from '@material-ui/icons/Send'
 import Navbar from './Navbar';
 import emailjs from 'emailjs-com';
 import { useHistory } from "react-router-dom";
+import Recaptcha from "react-recaptcha";
 
 const useStyles = makeStyles(theme => ({
   form: {
@@ -45,20 +46,36 @@ const InputField = withStyles({
 
 
 const Contacts = () => {
-  const classes = useStyles()
-  let history = useHistory()
+  const classes = useStyles();
+  const [isVerified, setIsVerified] = useState(false);
+  let history = useHistory();
 
   const sendEmail = (e) => {
     e.preventDefault();
-  
-    emailjs.sendForm('gmail', 'soggy_template', e.target, 'user_PvutjECO6CUiaLRfhAdzT')
+
+    if (isVerified) {
+      alert('Email Submitted!')
+      emailjs.sendForm('gmail', 'soggy_template', e.target, 'user_PvutjECO6CUiaLRfhAdzT')
       .then((result) => {
           console.log(result.text);
       }, (error) => {
           console.log(error.text);
       });
     
-    history.push('/');
+      history.push('/');
+    } else {
+      alert('Please verify you are human!')
+    }
+  }
+
+  const recaptchaLoaded = () => {
+    console.log('Capcha succesffully loaded!')
+  }
+
+  const verifyCallback = (response) => {
+    if (response) {
+      setIsVerified(true)
+    }
   }
 
   return (
@@ -115,6 +132,13 @@ const Contacts = () => {
             name="message"
           />
           <br />
+          
+          <Recaptcha
+            sitekey="6LcSbMIZAAAAAOGVCNo0ZwEkAc8g8cJ7QO-eiRPp"
+            render="explicit"
+            verifyCallback={verifyCallback}
+            onloadCallback={recaptchaLoaded}
+          />
           
           <Button className={classes.button} variant="outlined" fullWidth={true} endIcon={<SendIcon />} type="submit">
             contact me
