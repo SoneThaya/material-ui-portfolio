@@ -51,17 +51,17 @@ const Portfolio = () => {
                     Voice Controlled News App
                   </Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
-                    A conversational voice controlled React news application using Alan AI. A speech recognition software that allows you to add voice capabilities to your applications. This app uses news News API for the news and Material UI for styling.
+                    A conversational voice controlled React news application using Alan AI. A speech recognition software that allows you to add voice capabilities to your applications. This app uses News API for the news and Material UI for styling.
                   </Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions>
-              <a href="https://get-news.vercel.app/">
+              <a href="https://get-news.vercel.app/" target="_blank" rel="noopener noreferrer">
                 <Button size="small" color="primary">
                   Visit Site
                 </Button>
               </a>
-              <a href="https://github.com/SoneThaya/voice-controlled-app">
+              <a href="https://github.com/SoneThaya/voice-controlled-app" target="_blank" rel="noopener noreferrer">
                 <Button size="small" color="primary">
                   Github
                 </Button>

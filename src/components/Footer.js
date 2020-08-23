@@ -2,6 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { BottomNavigation, BottomNavigationAction } from '@material-ui/core'
 import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const useStyles = makeStyles({
   root: {
@@ -23,16 +24,27 @@ const Footer = () => {
   const classes = useStyles()
 
   return (
+    
     <BottomNavigation width="auto" style={{background: "#222"}}>
       
         <BottomNavigationAction
-        className={classes.root}
+          className={classes.root}
           style={{ padding: 0 }}
           icon={<GitHubIcon />}
           href="https://github.com/SoneThaya"
+          target="_blank"
         />
-    
+      
+      <BottomNavigationAction
+        className={classes.root}
+        style={{ padding: 0 }}
+        icon={<LinkedInIcon />}
+        href="https://www.linkedin.com/in/sone-thaya/"
+        target="_blank"
+      />
+       
     </BottomNavigation>
+    
   )
 }
 
